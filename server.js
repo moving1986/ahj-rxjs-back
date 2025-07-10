@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 
 const corsOptions = {
-  origin: '*',
+  origin: 'http://localhost:8080',
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'], 
 };
