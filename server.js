@@ -1,19 +1,12 @@
 const express = require('express');
 const faker = require('faker');
 const { v4: uuidv4 } = require('uuid');
+const cors = require('cors'); 
 
 const app = express();
 const port = 3000;
-const cors = require('cors');
 
-
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
-app.use(cors());
+app.use(cors()); 
 
 // Генерация случайных сообщений
 function generateMessages(count = 1) {
@@ -29,7 +22,6 @@ function generateMessages(count = 1) {
   }
   return messages;
 }
-
 
 // Endpoint для получения непрочитанных сообщений
 app.get('/messages/unread', (req, res) => {

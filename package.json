@@ -8,11 +8,20 @@
   },
   "author": "alexey mezentsev",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "faker": "^5.5.3",
     "uuidv4": "^6.2.13"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moving1986/ahj-rxjs-back.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moving1986/ahj-rxjs-back/issues"
+  },
+  "homepage": "https://github.com/moving1986/ahj-rxjs-back#readme",
+  "description": ""
 }
