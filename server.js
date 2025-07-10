@@ -6,7 +6,17 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:8080',
+  
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
+
 // Генерация случайных сообщений
 function generateMessages(count = 1) {
   const messages = [];
